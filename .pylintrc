@@ -3,6 +3,7 @@
 disable=
       C0116, # missing-function-docstring
       C0114, # missing-module-docstring
+      C0115, # Missing class docstring
       E0015, # unrecognized-option
       W0703, # Catching to general exception Exception
       C0321, # Multiple statements

@@ -14,8 +14,6 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=WIDTH, stretch_len=LEN)
         self.color("white")
 
-
-
     def go_up(self):
         new_y = self.ycor() + 20
         self.goto(self.xcor(), new_y)
