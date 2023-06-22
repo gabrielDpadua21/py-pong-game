@@ -2,6 +2,7 @@ from turtle import Screen
 from time import sleep
 from classes.paddle import Paddle
 from classes.ball import Ball
+from classes.score import Score
 
 
 if __name__ == "__main__":
@@ -15,6 +16,7 @@ if __name__ == "__main__":
     paddle01 = Paddle((350, 0))
     paddle02 = Paddle((-350, 0))
     ball = Ball()
+    score = Score()
 
     screen.onkey(paddle01.go_up, "w")
     screen.onkey(paddle01.go_down, "s")
@@ -31,10 +33,10 @@ if __name__ == "__main__":
         if ball.distance(paddle02) < 50 and ball.xcor() < -320:
             ball.bounce_x()
         if ball.xcor() > 380:
-            paddle01.make_point()
+            score.set_point_player01()
             ball.reset()
         if ball.xcor() < -380:
-            paddle02.make_point()
+            score.set_point_player02()
             ball.reset()
 
 

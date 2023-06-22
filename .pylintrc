@@ -9,6 +9,7 @@ disable=
       C0321, # Multiple statements
       W0221, # Arguments-differ
       R0801, # Duplicate Code
+      C0301, # Line too long
 
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
