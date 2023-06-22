@@ -26,6 +26,16 @@ if __name__ == "__main__":
         ball.move()
         if ball.ycor() > 280 or ball.ycor() < -280:
             ball.bounce_y()
+        if ball.distance(paddle01) < 50 and ball.xcor() > 320:
+            ball.bounce_x()
+        if ball.distance(paddle02) < 50 and ball.xcor() < -320:
+            ball.bounce_x()
+        if ball.xcor() > 380:
+            paddle01.make_point()
+            ball.reset()
+        if ball.xcor() < -380:
+            paddle02.make_point()
+            ball.reset()
 
 
 

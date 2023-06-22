@@ -21,3 +21,12 @@ class Ball(Turtle):
 
     def bounce_y(self) -> None:
         self.y_move *= -1
+
+    def bounce_x(self) -> None:
+        self.x_move *= -1
+
+    def reset(self) -> None:
+        self.color("black")
+        self.goto(0, 0)
+        self.color("white")
+        self.bounce_x()
